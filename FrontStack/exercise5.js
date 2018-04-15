@@ -56,3 +56,10 @@ console.log("mpArr",mpArr);
 //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
 const newLists1=array.map(element => [{"username":element.username,"team":element.team,"score":element.score,"items":element.items.map(it => it+"!")}]);
 console.log("newList", newLists);
+
+const answer = array.map(user => {
+	user.items = user.items.map(item => {
+		return item + "!"
+	});
+	return user;
+})
